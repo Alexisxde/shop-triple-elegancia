@@ -16,12 +16,12 @@ export default function NavCart({ closeNav }) {
   return (
     <>
       <div
-        className="z-9 fixed inset-0 bg-black opacity-50"
-        onClick={() => closeNav()}></div>
+        onClick={closeNav}
+        className="fixed inset-0 z-10 flex cursor-default select-none items-center justify-center bg-[#131313] bg-opacity-75 font-semibold text-gray-600"></div>
       <div className="fixed right-0 top-0 z-10 flex h-full w-2/3 animate-fade-left flex-col items-center justify-center bg-[#131313] animate-duration-150 sm:w-1/3 lg:w-1/4">
         <div className="h-14">
           <button
-            onClick={() => closeNav()}
+            onClick={closeNav}
             className="absolute -top-1 right-0 m-5 cursor-pointer">
             <HamburgerMenuClose className="size-6 text-white" />
           </button>

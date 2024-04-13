@@ -16,9 +16,7 @@ export default function Layout() {
   return (
     <>
       <header className="fixed flex w-full items-center justify-between bg-[#131313] px-5">
-        <button
-          className="cursor-pointer"
-          onClick={toggleNavCategories}>
+        <button className="cursor-pointer" onClick={toggleNavCategories}>
           <HamburgerMenuOpen className="size-6 text-white" />
         </button>
         <button onClick={() => scrollToSection('home')}>
@@ -32,12 +30,7 @@ export default function Layout() {
           <Cart className="size-6 text-white" />
         </button>
       </header>
-      {navCategories && (
-        <NavCategories
-          closeNav={toggleNavCategories}
-          navVisible={navCategories}
-        />
-      )}
+      {navCategories && <NavCategories closeNav={toggleNavCategories} />}
       {navCart && <NavCart closeNav={toggleNavCart} />}
     </>
   )
